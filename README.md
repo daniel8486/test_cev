@@ -9,12 +9,21 @@ Este projeto utiliza Docker, Node.js, Express, Sequelize, MariaDB, Moodle (Bitna
 
 ## Passos para rodar a aplicação
 
-### 1. Subir os containers principais
-- npm install 
-
+### 1. Subir os containers principais ( Execute os comandos na ordem abaixo)
 ```sh
-docker compose up -d
+ npm install 
 ```
+```sh
+ docker compose -f docker-compose.yml up -d ou docker compose up 
+```
+ - Garantir a persistência do container 
+```sh
+ docker compose -f docker-compose.yml down ou docker compose down 
+```
+```sh
+ docker compose -f docker-compose.yml up -d ou docker compose up  
+```
+
 Isso irá iniciar:
 - Postgres (banco do backend)
 - Backend Node.js
@@ -32,7 +41,7 @@ npm install -g json-server # se não tiver
 json-server --watch backend/mock_db_moodle/moodle-db.json --port 4000
 ```
 
-### 4. Testar rotas do backend
+### 4. Testar rotas do backend 
 - Acesse `http://localhost:3000` para rotas do backend (Express)
 - Exemplos:
 	- POST `/auth/register` para registrar usuário
