@@ -10,6 +10,8 @@ Este projeto utiliza Docker, Node.js, Express, Sequelize, MariaDB, Moodle (Bitna
 ## Passos para rodar a aplicação
 
 ### 1. Subir os containers principais
+- npm install 
+
 ```sh
 docker compose up -d
 ```
