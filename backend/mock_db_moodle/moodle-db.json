@@ -1,14 +1,36 @@
 {
-    "users": [],
-    "courses": [
+    "carreira": "Engenheiro de Software",
+    "submissions": [
+        {
+            "alunoId": 1,
+            "MissingSkills": ["Design", "UI/UX"]
+        },
+        {
+            "alunoId": 2,
+            "MissingSkills": ["Programaçao", "Logica", "Design", "UI/UX"]
+        }
+    ],
+    "users": [
         {
             "id": 1,
-            "name": "Algoritimos"
+            "cpf": "123.456.789-00",
+            "email": "usuario.teste@example.com",
+            "password_hash": "e99a18c428cb38d5f260853678922e03",
+            "missingSkills": ["Design", "UI/UX"]
+        }
+    ],
+    "alunos": [
+        {
+            "id": 1,
+            "name": "Aluno 1",
+            "email": "aluno1@example.com",
+            "missingSkills": ["Design", "UI/UX"]
         },
         {
             "id": 2,
-            "name": "Estruturas de Dados"
+            "name": "Aluno 2",
+            "email": "aluno2@example.com",
+            "missingSkills": ["Programaçao", "Logica", "Design", "UI/UX"]
         }
-    ],
-    "enrollments": []
+    ]
 }

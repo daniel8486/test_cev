@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 const router = express.Router();
 const { Course, User, Enrollment } = require('../database/models');
 
-// Middleware de autenticação JWT
+
 function authenticateToken(req, res, next) {
   const authHeader = req.headers['authorization'];
   const token = authHeader && authHeader.split(' ')[1];
@@ -15,13 +15,13 @@ function authenticateToken(req, res, next) {
   });
 }
 
-// Rota protegida para listar cursos
+
 router.get('/', authenticateToken, async (req, res) => {
   const courses = await Course.findAll();
   res.json({ courses });
 });
 
-// Criar curso
+
 router.post('/', authenticateToken, async (req, res) => {
   try {
     const { name, description, status } = req.body;
@@ -32,7 +32,7 @@ router.post('/', authenticateToken, async (req, res) => {
   }
 });
 
-// Matricular aluno em turma
+
 router.post('/:courseId/enroll', authenticateToken, async (req, res) => {
   try {
     const courseId = req.params.courseId;
@@ -48,7 +48,7 @@ router.post('/:courseId/enroll', authenticateToken, async (req, res) => {
   }
 });
 
-// Listar matrículas de um curso
+
 router.get('/:courseId/enrollments', authenticateToken, async (req, res) => {
   try {
     const courseId = req.params.courseId;
@@ -64,7 +64,6 @@ router.get('/:courseId/enrollments', authenticateToken, async (req, res) => {
   }
 });
 
-// Listar todos os alunos matriculados em todos os cursos
 router.get('/enrollments/all', authenticateToken, async (req, res) => {
   try {
     const enrollments = await Enrollment.findAll({
