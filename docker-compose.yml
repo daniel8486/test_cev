@@ -4,7 +4,7 @@ services:
     container_name: postgres_bd
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: "@AthusOtto@0401@@"
+      POSTGRES_PASSWORD: "test_cev_2025cev2025"
       POSTGRES_DB: my_backend_app
     ports:
       - "5432:5432"
@@ -23,8 +23,8 @@ services:
       DB_PORT: 5432
       DB_NAME: my_backend_app
       DB_USER: postgres
-      DB_PASS: "@AthusOtto@0401@@"
-      JWT_SECRET: supersegredo
+      DB_PASS: "test_cev_2025cev2025"
+      JWT_SECRET: test_cev_2025cev2025
       # MOODLE_BASE_URL: http://localhost:4000
     ports:
       - "3000:3000"

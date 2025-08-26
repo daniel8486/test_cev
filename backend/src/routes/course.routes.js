@@ -8,7 +8,7 @@ function authenticateToken(req, res, next) {
   const authHeader = req.headers['authorization'];
   const token = authHeader && authHeader.split(' ')[1];
   if (!token) return res.status(401).json({ message: 'Token não fornecido' });
-  jwt.verify(token, process.env.JWT_SECRET || 'supersegredo', (err, user) => {
+  jwt.verify(token, process.env.JWT_SECRET || 'test_cev_2025cev2025', (err, user) => {
     if (err) return res.status(403).json({ message: 'Token inválido' });
     req.user = user;
     next();

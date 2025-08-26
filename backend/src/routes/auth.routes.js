@@ -23,7 +23,7 @@ router.post('/login', async (req, res) => {
     }
     const token = jwt.sign(
       { id: user.id, name: user.name, email: user.email, role: user.role },
-      process.env.JWT_SECRET || 'supersegredo',
+      process.env.JWT_SECRET || 'test_cev_2025cev2025',
       { expiresIn: '1h' }
     );
     res.json({ message: 'Login realizado com sucesso!', token });

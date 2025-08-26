@@ -54,7 +54,7 @@ json-server --watch backend/mock_db_moodle/moodle-db.json --port 4000
 	```
 ### 7. Endpoints ( Exemplo de Requests)
 
-curl -X POST http://localhost:3000/auth/register -H "Content-Type: application/json" -d '{"email":"teste1@example.com","password":"123456"}'
+curl -X POST http://localhost:3000/auth/register -H "Content-Type: application/json" -d '{"email":"teste1@example.com","password":"123456", "name": "Teste 1"}'
 
 curl -X POST http://localhost:3000/auth/login -H "Content-Type: application/json" -d '{"email":"teste1@example.com","password":"123456"}'
 
