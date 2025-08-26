@@ -59,10 +59,28 @@ json-server --watch backend/mock_db_moodle/moodle-db.json --port 4000
 	```sh
 	node backend/mock_db_moodle/calcula_missing_skills_todos.js
 	```
+- Para calcular habilidade
+	```sh
+	node backend/mock_db_moodle/calcula_missing_skills.js
+	```
 - Para testar validação de aluno:
 	```sh
 	node backend/mock_db_moodle/testa_validacao_aluno.js
 	```
+- Testar endpoints Mockados
+    ```sh
+	http://localhost:4000/carreira
+	```   
+	```sh
+	http://localhost:4000/submissions
+	```  
+	 ```sh
+	http://localhost:4000/users
+	```  
+	```sh
+	http://localhost:4000/alunos
+	```  
+   	
 ### 7. Endpoints ( Exemplo de Requests)
 
 curl -X POST http://localhost:3000/auth/register -H "Content-Type: application/json" -d '{"email":"teste1@example.com","password":"123456", "name": "Teste 1"}'
