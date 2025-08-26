@@ -50,6 +50,15 @@ json-server --watch backend/mock_db_moodle/moodle-db.json --port 4000
 	```sh
 	node backend/mock_db_moodle/testa_validacao_aluno.js
 	```
+### 7. Endpoints ( Exemplo de Requests)
+
+curl -X POST http://localhost:3000/auth/register -H "Content-Type: application/json" -d '{"email":"teste1@example.com","password":"123456"}'
+
+curl -X POST http://localhost:3000/auth/login -H "Content-Type: application/json" -d '{"email":"teste1@example.com","password":"123456"}'
+
+curl -X POST http://localhost:3000/alunos/validate -H "Content-Type: application/json" -d '{"id":1}'
+
+curl -i http://localhost:3000/ping
 
 ## Observações
 - Para zerar o banco do backend, remova o volume:

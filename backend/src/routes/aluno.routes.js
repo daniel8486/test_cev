@@ -3,7 +3,8 @@ const fs = require('fs');
 const router = express.Router();
 
 
-const dbPath = './backend/mock_db_moodle/moodle-db.json';
+const path = require('path');
+const dbPath = path.join(__dirname, '../../mock_db_moodle/moodle-db.json');
 function getAlunos() {
   const db = JSON.parse(fs.readFileSync(dbPath, 'utf8'));
   return db.alunos || [];
