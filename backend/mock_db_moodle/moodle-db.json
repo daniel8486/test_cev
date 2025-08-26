@@ -1,0 +1,14 @@
+{
+    "users": [],
+    "courses": [
+        {
+            "id": 1,
+            "name": "Algoritimos"
+        },
+        {
+            "id": 2,
+            "name": "Estruturas de Dados"
+        }
+    ],
+    "enrollments": []
+}
